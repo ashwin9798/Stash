@@ -1,0 +1,21 @@
+{
+  "name": "Stasher",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "server": "webpack && babel-node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+
+
+  "babel": {
+    "presets": [
+        "es2015"
+    ]
+  }
+
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

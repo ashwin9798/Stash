@@ -22,4 +22,18 @@ export class Home extends React.Component {
         );
     }
 }
- 
+
+function mapStateToProps(state) {
+  return {
+    imageList: state.get('imageList').toJS(),
+    isLoading: state.getIn(['view', 'isLoading'])
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+    return {
+        getImages: () => dispatch(getImages())
+    }
+}
+
+export const HomeContainer = connect(mapStateToProps, mapDispatchToProps)(Home);
